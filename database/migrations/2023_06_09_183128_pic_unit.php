@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('administrator', function (Blueprint $table) {
+        Schema::create('pic_unit', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_adm');
-        });
+            $table->string('nama');
+            $table->string('sub_domain');
+        } );
     }
 
-    /** 
+    /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::drop('administrator');
-    } 
+        Schema::drop('pic_unit');
+    }
 };

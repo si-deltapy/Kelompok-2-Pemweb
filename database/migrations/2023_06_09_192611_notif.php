@@ -11,17 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('administrator', function (Blueprint $table) {
+        Schema::create('notif', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_adm');
+            $table->string('subjek');
+            $table->date('tanggal_notif');
+            $table->string('isi_pesan');
         });
     }
 
-    /** 
+    /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::drop('administrator');
-    } 
+        Schema::drop('notif');
+    }
 };
